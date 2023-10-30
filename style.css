@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: steelblue;
+  font-family: 'Muli', sans-serif;
+  outline: none;
+  font-size: 62.5%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #ecf2ff;
+  height: 100vh;
+  width: 100%;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.form-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 60rem;
+  height: 35rem;
+  display: flex;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 3rem rgba(32, 61, 127, 0.3);
+  overflow: hidden;
+}
+
+.form-wrapper-bg {
+  position: absolute;
+  height: 50rem;
+  width: 50rem;
+  background-color: #407bff;
+  border-radius: 15rem;
+  left: -45%;
+  top: -15%;
+  transform-origin: right-bottom;
+  transform: rotateZ(-40deg);
+  transition: transform 1.5s;
+}
+
+.navigate .form-wrapper-bg {
+  transform: rotateZ(140deg) translate(-45rem, -45rem);
+}
+
+.form-wrapper-left,
+.form-wrapper-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-wrapper-left {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.navigate .form-wrapper-left {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s 1s;
+}
+
+.form-wrapper-right {
+  transition: all 0.5s 1s;
+}
+
+.navigate .form-wrapper-right {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.form-wrapper h1 {
+  color: #407bff;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 0;
+  margin: 1 rem 0;
+  border: 0;
+  border-bottom: 0.2rem solid rgba(64, 123, 255, 0.5);
+  color: #407bff;
+  padding-right: 2rem;
+  background-color: transparent;
+}
+
+.input-group input::placeholder {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  color: #407bff;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.input-group input:focus {
+  outline: 0;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50);
+  color: #407bff;
+}
+
+.form-btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  /* background-color: lightblue; */
+  background-color: #407bff;
+  padding: 16px;
+  margin-top: 2rem;
+  font-family: inherit;
+  border: 0;
+  border-radius: 5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 0.5rem 1rem rgba(65, 123, 255, 0.4);
+}
+
+.form-btn:active {
+  transform: translateY(0.2rem);
+}
+
+.form-wrapper a {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #407bff;
+}
+
+.signup-link {
+  right: 4rem;
+}
+
+.signin-link {
+  left: 4rem;
+}
