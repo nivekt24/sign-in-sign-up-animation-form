@@ -170,3 +170,39 @@ body {
 .signin-link {
   left: 4rem;
 }
+
+@media screen and (max-width: 992px) {
+  .form-wrapper {
+    width: 45rem;
+  }
+
+  .form-wrapper-bg {
+    left: -65%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-wrapper {
+    width: 35rem;
+  }
+
+  .form-wrapper-bg {
+    left: -105%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form-wrapper {
+    width: 25rem;
+    height: 30rem;
+  }
+
+  .form-wrapper-bg {
+    left: -175%;
+    top: -25%;
+  }
+
+  .input-group > * {
+    font-size: 0.65rem;
+  }
+}
